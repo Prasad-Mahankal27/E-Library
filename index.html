@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice-Controlled Login</title>
+    <link rel="stylesheet" href="LoginStyles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h2 id="formTitle">Voice Login</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required readonly>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required readonly>
+                </div>
+
+                <button type="button" id="startVoice" class="voice-btn">
+                    Start Voice Control
+                </button>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+
+            <div class="status">
+                <p class="mode-text">Current Mode: <span id="currentMode">Login</span></p>
+                <p id="statusMessage" class="status-message"></p>
+            </div>
+
+            <div class="help-text">
+                <h3>Voice Commands:</h3>
+                <ul>
+                    <li>"Login" - Switch to login mode</li>
+                    <li>"Register" - Switch to register mode</li>
+                    <li>"Username [your username]" - Set username</li>
+                    <li>"Password [your password]" - Set password</li>
+                    <li>"Submit" - Submit the form</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
